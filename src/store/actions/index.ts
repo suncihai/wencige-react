@@ -1,6 +1,6 @@
 import { ITradeItem, IChatItem } from '../reducers';
 import Cookie from 'js-cookie';
-import { history } from '../index';
+import { history } from '../../index';
 
 export const selectTradeItem = (
   tradeId: string,

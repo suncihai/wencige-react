@@ -1,4 +1,4 @@
-import { tradeList, chatMap } from '../initialData';
+import { tradeList, chatMap } from '../../initialData';
 import { IChatItem } from '.';
 
 const chatMapReducer = (

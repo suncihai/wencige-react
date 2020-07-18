@@ -1,4 +1,4 @@
-import { ITradeItem, IChatItem } from './reducers/index';
+import { ITradeItem, IChatItem } from './store/reducers/index';
 
 export const tradeList: Array<ITradeItem> = [
   {

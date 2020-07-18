@@ -1,14 +1,14 @@
 import React from 'react';
 import { Dispatch } from 'redux';
 import { connect } from 'react-redux';
-import { ITradeItem } from '../reducers';
+import { ITradeItem } from '../store/reducers';
 import { Text } from '../common/Text';
 import { Button } from '../common/Button';
 import { InfoCell } from '../common/InfoCell';
 import { Avatar } from '../common/Avatar';
 import styled from 'styled-components';
 import { lightGray, bitGray } from '../theme';
-import { releaseBTC, switchBuySell } from '../actions';
+import { releaseBTC, switchBuySell } from '../store/actions';
 import avatar_buyer from '../imgs/avatar_buyer.png';
 import avatar_seller from '../imgs/avatar_seller.png';
 import _ from 'lodash';

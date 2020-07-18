@@ -6,7 +6,7 @@ import { Provider } from 'react-redux';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import rootReducer from './reducers';
+import rootReducer from './store/reducers';
 
 //this history would help routering
 export const history = createBrowserHistory();
@@ -39,7 +39,7 @@ if (module.hot) {
   });
 
   // Reload reducers
-  module.hot.accept('./reducers', () => {
+  module.hot.accept('./store/reducers', () => {
     store.replaceReducer(connectRouter(history)(rootReducer));
   });
 }

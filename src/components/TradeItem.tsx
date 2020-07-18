@@ -1,7 +1,7 @@
 import React from 'react';
 import { Dispatch } from 'redux';
 import { connect } from 'react-redux';
-import { ITradeItem } from '../reducers';
+import { ITradeItem } from '../store/reducers';
 import {
   green,
   bitBlue,

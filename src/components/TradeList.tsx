@@ -2,11 +2,11 @@ import React from 'react';
 import { useEffect } from 'react';
 import { Dispatch } from 'redux';
 import { connect } from 'react-redux';
-import { ITradeItem } from '../reducers';
+import { ITradeItem } from '../store/reducers';
 import TradeItem from './TradeItem';
 import styled from 'styled-components';
 import { lightGray } from '../theme';
-import { selectTradeItem, getInitialItem } from '../actions';
+import { selectTradeItem, getInitialItem } from '../store/actions';
 import Cookie from 'js-cookie';
 import { history } from '../index';
 

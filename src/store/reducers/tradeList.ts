@@ -1,4 +1,4 @@
-import { tradeList } from '../initialData';
+import { tradeList } from '../../initialData';
 import { ITradeItem } from '.';
 
 const tradeListReducer = (state = tradeList, action): Array<ITradeItem> => {
