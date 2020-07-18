@@ -26,7 +26,7 @@ const TradeList = (props: StateProps & DispatchProps) => {
   return (
     <Wrapper>
       {props.tradeList
-        .filter(item => item.isBuy !== props.isBuyer)
+        .filter((item) => item.isBuy !== props.isBuyer)
         .map((ele, index) => {
           return (
             <TradeItem
@@ -70,19 +70,19 @@ interface DispatchProps {
   };
 }
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   tradeList: state.tradeList,
-  isBuyer: state.isBuyer
+  isBuyer: state.isBuyer,
 });
 
-const mapDispatchToProps = (dispatch: Dispatch<any>) => ({
+const mapDispatchToProps = (dispatch: Dispatch) => ({
   selectTradeItem: (
     tradeId: string,
     isBuyer: boolean,
     tradeList: Array<ITradeItem>
   ) => dispatch(selectTradeItem(tradeId, isBuyer, tradeList)),
   getInitialItem: (tradeList: Array<ITradeItem>) =>
-    dispatch(getInitialItem(tradeList))
+    dispatch(getInitialItem(tradeList)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(TradeList);

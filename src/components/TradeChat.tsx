@@ -90,7 +90,7 @@ const TradeChat = (props: StateProps & DispatchProps) => {
     setTimeout(() => {
       let tradeItem: ITradeItem = null;
       if (Cookie.get('paxfulTradeItem')) {
-        props.tradeList.forEach(ele => {
+        props.tradeList.forEach((ele) => {
           if (ele.tradeId === Cookie.get('paxfulTradeItem')) {
             tradeItem = ele;
           }
@@ -189,7 +189,7 @@ const TradeChat = (props: StateProps & DispatchProps) => {
             );
             messagesEndRef.current.scrollIntoView({ behavior: 'smooth' });
           }}
-          onChange={e => {
+          onChange={(e) => {
             setInput(e.target.value);
           }}
         />
@@ -233,15 +233,15 @@ interface DispatchProps {
   };
 }
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   tradeItem: state.tradeItem,
   tradeList: state.tradeList,
   tradeChat: state.tradeChat,
   isBuyer: state.isBuyer,
-  chatMap: state.chatMap
+  chatMap: state.chatMap,
 });
 
-const mapDispatchToProps = (dispatch: Dispatch<any>) => ({
+const mapDispatchToProps = (dispatch: Dispatch) => ({
   deleteTradeItem: (
     tradeId: string,
     tradeList: Array<ITradeItem>,
@@ -266,7 +266,7 @@ const mapDispatchToProps = (dispatch: Dispatch<any>) => ({
         isUser,
         chatMap
       )
-    )
+    ),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(TradeChat);

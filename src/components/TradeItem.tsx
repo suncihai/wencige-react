@@ -8,7 +8,7 @@ import {
   bitGray,
   lightGray,
   darkGray,
-  tinyGray
+  tinyGray,
 } from '../theme';
 import styled from 'styled-components';
 import { Text } from '../common/Text';
@@ -77,7 +77,7 @@ const TradeItem = (props: StateProps & OwnProps & DispatchProps) => (
         <Dot
           className={_.compact([
             props.item.isRead && 'isRead',
-            props.item.isActive && 'isActive'
+            props.item.isActive && 'isActive',
           ]).join(' ')}
         />
         <TextBox>
@@ -116,12 +116,12 @@ interface OwnProps {
   isBuyer: boolean;
 }
 
-const mapStateToProps = state => ({
-  isBuyer: state.isBuyer
+const mapStateToProps = (state) => ({
+  isBuyer: state.isBuyer,
 });
 
 interface DispatchProps {}
 
-const mapDispatchToProps = (dispatch: Dispatch<ITradeItem>) => ({});
+const mapDispatchToProps = (dispatch: Dispatch) => ({});
 
 export default connect(mapStateToProps, mapDispatchToProps)(TradeItem);

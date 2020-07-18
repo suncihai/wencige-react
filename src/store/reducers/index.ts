@@ -6,6 +6,7 @@ import tradeListReducer from './tradeList';
 import tradeItemReducer from './tradeItem';
 import tradeChatReducer from './tradeChat';
 import chatMapReducer from './chatMap';
+import { postsReducer } from './PostItem';
 
 const rootReducer = combineReducers({
   count: counterReducer,
@@ -13,7 +14,8 @@ const rootReducer = combineReducers({
   tradeList: tradeListReducer,
   tradeItem: tradeItemReducer,
   tradeChat: tradeChatReducer,
-  chatMap: chatMapReducer
+  chatMap: chatMapReducer,
+  posts: postsReducer,
 });
 
 export interface State {

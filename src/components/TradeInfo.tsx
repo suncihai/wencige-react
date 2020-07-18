@@ -22,7 +22,7 @@ const Wrapper = styled.div`
 `;
 
 const BlurArea = styled.div`
-  filter: blur(${props => props.blur});
+  filter: blur(${(props) => props.blur});
 `;
 
 const Row = styled.div`
@@ -195,17 +195,17 @@ interface DispatchProps {
   };
 }
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   tradeList: state.tradeList,
   tradeItem: state.tradeItem,
-  isBuyer: state.isBuyer
+  isBuyer: state.isBuyer,
 });
 
-const mapDispatchToProps = (dispatch: Dispatch<any>) => ({
+const mapDispatchToProps = (dispatch: Dispatch) => ({
   releaseBTC: (tradeId: string, tradeList: Array<ITradeItem>) =>
     dispatch(releaseBTC(tradeId, tradeList)),
   switchBuySell: (isBuyer: boolean, tradeList: Array<ITradeItem>) =>
-    dispatch(switchBuySell(isBuyer, tradeList))
+    dispatch(switchBuySell(isBuyer, tradeList)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(TradeInfo);

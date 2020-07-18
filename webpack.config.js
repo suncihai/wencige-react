@@ -8,7 +8,7 @@ module.exports = {
     path.resolve('src/index.tsx'),
   ],
   resolve: {
-    extensions: ['.js', '.ts', '.tsx', 'css', 'png'],
+    extensions: ['.js', '.ts', '.tsx', 'css', 'png', 'php'],
   },
   devServer: {
     historyApiFallback: true,
@@ -21,8 +21,7 @@ module.exports = {
     publicPath: '/dist/',
   },
   module: {
-    rules: [
-      {
+    rules: [{
         test: /\.tsx?/,
         loader: 'ts-loader'
       },
@@ -30,9 +29,9 @@ module.exports = {
         test: /\.(png|jpe?g|svg|css)$/,
         loader: 'file-loader',
         options: {
-            name: 'assets/[name].[ext]',
+          name: 'assets/[name].[ext]',
         }
-    }
+      }
     ],
   },
   plugins: [
