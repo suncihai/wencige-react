@@ -7,6 +7,8 @@ import { getInitStoreState } from './store/initStoreState';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+require('!style-loader!css-loader!./index.css');
+
 import rootReducer from './store/reducers';
 
 //this history would help routering
