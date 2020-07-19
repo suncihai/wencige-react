@@ -10,15 +10,9 @@ export interface IPostItem {
   title: string;
 }
 
-export interface IPosts {
-  posts: IPostItem[];
-}
-
-const initState: IPosts = {
-  posts: [],
-};
+const initState: IPostItem[] = []
 
 export const postsReducer = createReducer<
-  IPosts,
+  IPostItem[],
   ActionType<typeof appActions>
 >(initState);

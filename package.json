@@ -6,7 +6,6 @@
   "scripts": {
     "dev": "webpack-dev-server --port 3000 --open 'google chrome'",
     "build": "webpack",
-    "start": "webpack-dev-server -w --config webpack.config.js --open 'google chrome' "
   },
   "author": "Cihai Sun",
   "license": "MIT",

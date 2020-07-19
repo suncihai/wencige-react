@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Button } from 'reactstrap';
 
 const Wrapper = styled.div`
   width: 100%;
@@ -12,9 +11,7 @@ const Row = styled.div`
 
 const Posts = () => (
   <Wrapper>
-    <Row>
-      <Button color="success">Test</Button>
-    </Row>
+    <Row></Row>
   </Wrapper>
 );
 
