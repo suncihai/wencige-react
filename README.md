@@ -1,21 +1,47 @@
-## Start
+# mini-shop
 
-In the project directory, you can run:
-npm install
+一个迷你商城，数据结构课设前端部分。
 
-After installed, run npm run dev, will automatically open localhost:3000 in chrome
+## 技术栈
 
-## Notes
+1. react hooks + react router4 + constate
+2. typescript
+3. ant design
+4. axios
 
-1. Complete all requirements according to assigment doc.
-2. use React + Redux + Typescript, all libraries/dependencies are latest version.
-3. NaviBar just for display, no real link.
+## 本地测试
 
-## Test Case
+### 安装 node
 
-1. Click trade items to see their contents.
-2. If item is paid, you could release BTC or send a reminder;
-3. Can delete selected trade item.
-4. Click switch button in the right bottom part of page to switch you between buyer and seller. Then you can see all buy orders and sell orders.
-5. Did cache for reloading page
-6. Calvin, Ivan and Arthr will send you message in 5/8/10 seconds. if you are not selecting the item, gray notification dot will turn green.
+推荐使用 [nvm ](<https://blog.csdn.net/sinat_38334334/article/details/80013648>)安装和管理 node。
+
+### 安装 cnpm
+
+如果可以翻墙的话就可以不用安装 cnpm, 直接使用 npm 代替 cnpm。
+
+因为项目中需要 `node-sass`, npm 和 yarn 安装 `node-sass`过程中都会产生问题，cnpm 亲测是没问题的。
+
+安装 **cnpm** 很简单，命令行输入`npm install -g cnpm`就可以了。
+
+### 安装依赖并启动项目
+
+1. 命令行 cd 到项目根目录 ， 使用命令 `cnpm install` 安装项目依赖。
+2. 使用命令 `npm start` 启动项目，程序会自动打开浏览器，并显示首页内容。
+
+## 一些截图
+
+### 登入
+
+![登入页](https://github.com/tjx666/mini-shop/raw/master/screenshots/login.png?raw=true)
+
+### 注册页
+
+![注册页](https://github.com/tjx666/mini-shop/raw/master/screenshots/register.png?raw=true)
+
+### 首页
+
+![登入页](https://github.com/tjx666/mini-shop/raw/master/screenshots/home.png?raw=true)
+
+### 分类管理
+
+![登入页](https://github.com/tjx666/mini-shop/raw/master/screenshots/category-trees.png?raw=true)

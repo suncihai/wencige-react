@@ -1,51 +1,29 @@
-import { AppContainer } from 'react-hot-loader';
-import { applyMiddleware, compose, createStore } from 'redux';
-import { createBrowserHistory } from 'history';
-import { routerMiddleware, connectRouter } from 'connected-react-router';
-import { Provider } from 'react-redux';
-import { getInitStoreState } from './store/initStoreState';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
+import { LocaleProvider } from 'antd';
+import { addLocaleData, IntlProvider } from 'react-intl';
 import App from './App';
-require('!style-loader!css-loader!./index.css');
+import { getLocale } from './locales';
+import './index.scss';
+import 'normalize.css';
+import * as serviceWorker from './serviceWorker';
 
-import rootReducer from './store/reducers';
+const appLocale = getLocale();
+addLocaleData(appLocale.data);
 
-//this history would help routering
-export const history = createBrowserHistory();
-
-const initialState = getInitStoreState();
-
-const composeEnhancer: typeof compose =
-  (window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-const store: any = createStore(
-  connectRouter(history)(rootReducer),
-  initialState,
-  composeEnhancer(applyMiddleware(routerMiddleware(history)))
+ReactDOM.render(
+    <LocaleProvider locale={appLocale.antd}>
+        <IntlProvider locale={appLocale.locale} messages={appLocale.messages}>
+            <BrowserRouter>
+                <App />
+            </BrowserRouter>
+        </IntlProvider>
+    </LocaleProvider>,
+    document.getElementById('root')
 );
 
-const render = () => {
-  ReactDOM.render(
-    <AppContainer>
-      <Provider store={store}>
-        <App history={history} />
-      </Provider>
-    </AppContainer>,
-    document.getElementById('react-root')
-  );
-};
-
-render();
-
-// Hot reloading
-if (module.hot) {
-  // Reload components
-  module.hot.accept('./App', () => {
-    render();
-  });
-
-  // Reload reducers
-  module.hot.accept('./store/reducers', () => {
-    store.replaceReducer(connectRouter(history)(rootReducer));
-  });
-}
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://bit.ly/CRA-PWA
+serviceWorker.unregister();

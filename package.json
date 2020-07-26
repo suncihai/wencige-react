@@ -1,80 +1,101 @@
 {
-  "name": "connected-react-router-typescript-boilerplate",
-  "version": "1.0.0",
-  "description": "A basic example for Connected React Router with TypeScript",
-  "main": "src/index.tsx",
-  "scripts": {
-    "dev": "webpack-dev-server --port 3000 --open 'google chrome'",
-    "build": "webpack",
-  },
-  "author": "Cihai Sun",
-  "license": "MIT",
-  "devDependencies": {
-    "react-hot-loader": "^3.1.3"
-  },
-  "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.27",
-    "@fortawesome/free-solid-svg-icons": "^5.12.1",
-    "@fortawesome/react-fontawesome": "^0.1.8",
-    "@types/axios": "^0.14.0",
-    "@types/history": "^4.7.5",
-    "@types/react": "^16.9.23",
-    "@types/react-dom": "^16.9.5",
-    "@types/react-hot-loader": "^4.1.1",
-    "@types/react-redux": "^7.1.7",
-    "@types/react-router": "^5.1.4",
-    "@types/react-router-dom": "^5.1.3",
-    "@types/redux": "^3.6.0",
-    "@types/styled-components": "^5.0.1",
-    "@types/webpack-env": "^1.15.1",
-    "antd": "^4.4.2",
-    "awesome-typescript-loader": "^5.2.1",
-    "axios": "^0.19.2",
-    "babel-core": "^6.26.3",
-    "babel-loader": "^8.1.0",
-    "babel-plugin-import": "^1.13.0",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
-    "connected-react-router": "^4.4.0",
-    "css-loader": "^0.28.7",
-    "file-loader": "^5.1.0",
-    "history": "^4.6.1",
-    "js-cookie": "^2.2.1",
-    "less": "^3.12.2",
-    "less-loader": "^6.2.0",
-    "lodash": "^4.17.15",
-    "moment": "^2.24.0",
-    "node-sass": "^4.14.1",
-    "react": "^16.8.4",
-    "react-dom": "^16.8.4",
-    "react-masonry-component": "^6.2.1",
-    "react-redux": "^5.0.4",
-    "react-router": "^5.1.2",
-    "react-router-dom": "^5.1.2",
-    "react-scripts": "^3.4.1",
-    "redux": "^4.0.4",
-    "sass-loader": "^6.0.6",
-    "style-loader": "^0.19.0",
-    "styled-components": "^5.0.1",
-    "ts-import-plugin": "^1.6.6",
-    "ts-loader": "^6.2.1",
-    "tslib": "^1.11.0",
-    "typesafe-actions": "^5.1.0",
-    "typescript": "^3.9.7",
-    "webpack": "^4.42.0",
-    "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.10.3"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+    "name": "mini-shop",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "@types/mockjs": "^1.0.2",
+        "antd": "^3.17.0",
+        "axios": "^0.18.0",
+        "chance": "^1.0.18",
+        "classnames": "^2.2.6",
+        "constate": "^1.1.1",
+        "eslint-plugin-react": "^7.20.3",
+        "faker": "^4.1.0",
+        "lodash": "^4.17.11",
+        "mockjs": "^1.0.1-beta3",
+        "normalize.css": "^8.0.1",
+        "randexp": "^0.5.3",
+        "react": "^16.8.6",
+        "react-dom": "^16.8.6",
+        "react-intl": "^2.8.0",
+        "react-router-dom": "^5.0.0",
+        "react-scripts": "3.0.1",
+        "react-use": "^9.0.0",
+        "typescript": "3.4.5"
+    },
+    "devDependencies": {
+        "@commitlint/cli": "^7.6.1",
+        "@commitlint/config-conventional": "^7.6.0",
+        "@types/chance": "^1.0.4",
+        "@types/classnames": "^2.2.7",
+        "@types/faker": "^4.1.5",
+        "@types/jest": "24.0.12",
+        "@types/lodash": "^4.14.126",
+        "@types/node": "12.0.0",
+        "@types/react": "16.8.17",
+        "@types/react-dom": "16.8.4",
+        "@types/react-intl": "^2.3.17",
+        "@types/react-router-dom": "^4.3.3",
+        "babel-plugin-import": "^1.11.0",
+        "customize-cra": "^0.2.12",
+        "cz-conventional-changelog": "^2.1.0",
+        "eslint": "^5.16.0",
+        "eslint-plugin-import": "^2.17.2",
+        "husky": "^2.2.0",
+        "less": "^3.9.0",
+        "less-loader": "^5.0.0",
+        "lint-staged": "^8.1.6",
+        "node-sass": "^4.12.0",
+        "prettier": "^1.17.0",
+        "react-app-rewired": "^2.1.3",
+        "stylelint": "^10.0.1",
+        "stylelint-config-prettier": "^5.1.0",
+        "stylelint-config-rational-order": "^0.1.2",
+        "stylelint-config-standard": "^18.3.0",
+        "stylelint-declaration-block-no-ignored-properties": "^2.1.0",
+        "stylelint-order": "^3.0.0"
+    },
+    "scripts": {
+        "start": "react-app-rewired start",
+        "build": "react-app-rewired build",
+        "test": "react-app-rewired test",
+        "eject": "react-scripts eject"
+    },
+    "config-overrides-path": "config/config-overrides.js",
+    "lint-staged": {
+        "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+            "prettier --single-quote --write",
+            "git add"
+        ],
+        "*.css": "stylelint",
+        "*.scss": "stylelint --syntax=scss"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged",
+            "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+        }
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/cz-conventional-changelog"
+        }
+    },
+    "commitlint": {
+        "extends": [
+            "@commitlint/config-conventional"
+        ]
+    }
 }
