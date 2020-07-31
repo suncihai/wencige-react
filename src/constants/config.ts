@@ -1,4 +1,4 @@
 export default {
-    domain: 'http://127.0.0.1:8080',
+    domain: 'http://localhost:3000',
     primaryColor: 'rgba(29, 165, 122, 1)',
 };
