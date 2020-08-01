@@ -6,6 +6,7 @@ import {
     HomePage,
     CategoryPage,
     CategoryManage,
+    PostsPage,
 } from './pages';
 import { AppHeader, AdminHeader } from './components';
 import './App.scss';
@@ -17,6 +18,7 @@ const Frontend = () => {
             <Switch>
                 <Route path="/fe/home" component={HomePage} />
                 <Route path="/fe/category" component={CategoryPage} />
+                <Route path="/fe/posts" component={PostsPage} />
                 <Redirect to="/fe/login" />
             </Switch>
         </div>
