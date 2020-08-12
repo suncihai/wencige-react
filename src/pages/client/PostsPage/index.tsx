@@ -6,7 +6,6 @@ import './style.scss';
 export const PostsPage = () => {
     React.useEffect(() => {
         getPosts().then(response => {});
-        console.log('test');
     }, []);
 
     return (
