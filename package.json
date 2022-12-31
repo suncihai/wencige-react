@@ -21,7 +21,7 @@
         "react-intl": "^2.8.0",
         "react-masonry-component": "^6.2.1",
         "react-router-dom": "^5.0.0",
-        "react-scripts": "3.0.1",
+        "react-scripts": "5.0.1",
         "react-use": "^9.0.0",
         "typescript": "3.4.5"
     },
@@ -45,7 +45,7 @@
         "eslint-plugin-import": "^2.17.2",
         "husky": "^2.2.0",
         "less": "^3.9.0",
-        "less-loader": "^5.0.0",
+        "less-loader": "^11.1.0",
         "lint-staged": "^8.1.6",
         "node-sass": "^4.12.0",
         "prettier": "^1.17.0",
